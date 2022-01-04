@@ -1,0 +1,253 @@
+:root{
+    --bg-color:rgb(43, 43, 179);
+    /* --bg-color:rgb(189 78 98); */
+    --cx-padding:1rem;
+    --off-white-bg:#f5f0f0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height:100%;
+    font-family: 'Roboto', sans-serif;
+} 
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    padding: 0 var(--cx-padding);
+}
+.bold{
+    font-weight: 700;
+}
+
+header{
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;  
+}
+header > a{
+    color: white;
+}
+
+header li a {
+    color: rgb(241, 240, 240);
+    padding: 1rem 1.5rem;
+    display: table;
+}
+
+header li a:hover {
+    color: white;
+}
+
+.main-content{
+    height: calc(100% - 55px);
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.sidebar{
+    width:15%;
+    background-color: white;
+    color:white;
+    border-right: 1px solid var(--off-white-bg);
+    overflow-y: scroll;
+}
+
+.sidebar  .mini-profile-view{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f0f0;
+    color: black;
+}
+
+.mini-profile-view img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.mini-profile-view h4,.mini-profile-view h6{
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+
+.sidebar > ul.main-nav > li {
+   background-color: white;
+   display: grid;
+   align-items: center;
+}
+.sidebar > ul.main-nav > li > a {
+    padding: 1rem var(--cx-padding);
+    color:black;
+    width: 100%;
+    display: table;
+    font-weight: 700;
+}
+.sidebar > ul.main-nav > li > a > i{
+    margin-right: 1rem;
+    width: 20px;
+}
+.sidebar > ul.main-nav > li > a > i.d-icon{
+    margin-right: 0;
+    float: right;
+}
+.sidebar > ul.main-nav > li:hover > a{
+    background-color: #e9e9f7;
+    color:var(--bg-color);
+}
+.sidebar > ul.main-nav > li.active > a{
+    background-color: var(--bg-color);
+    color:white;
+}
+
+.sub-nav{
+    background-color: #f7f7f7;
+}
+
+.sub-nav li{
+   background-color: #f7f7f7;
+}
+.sub-nav li > a{
+    background-color: #f7f7f7;
+    padding: 1rem 0;
+    color:black;
+    width: 100%;
+    display: table;
+    text-align: center;
+}
+
+.sub-nav li:hover > a{
+    font-weight: 700;
+}
+
+.navigation-content{
+    height: 100%;
+    width: 100%;
+}
+
+.action-header{
+    height: 55px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    box-shadow: 0px 2px 8px dimgrey;
+}
+
+.action-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-list li {
+    margin-right: 1rem;
+}
+
+.action-list li:last-child {
+    margin-right: 0rem;
+}
+
+.action-list li a {
+    display: table;
+    padding: 0.7rem 1rem;
+    color: white;
+}
+.action-list li a.green-btn{
+    background: green;
+}
+.action-list li a.pink-btn{
+    background: #bd4e62;
+}
+.action-list li a i {
+    margin-left: 0.5rem;
+}
+
+.content-block{
+    width: 100%;
+    padding:0.5rem;
+    height: calc(100% - 63px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-nav{
+    width: 20%;
+    background: white;
+    height: 100%;
+    box-shadow: 2px 2px 5px #d0d0d0;
+    margin-right: 0.5%;
+}
+
+.list-nav .search-form{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-nav .search-form i{
+    cursor: pointer;
+}
+
+.list-content .list-content-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: beige; */
+    padding:1rem;
+}
+.list-content .list-content-item:first-child{
+   font-weight: 700;    
+   background: rgb(189 78 98);
+   color: white;
+   pointer-events: none;
+}
+.list-content .list-content-item:hover{
+   background-color: rgb(236 236 236);
+   color:black;
+   cursor:pointer;
+}
+.list-content .list-content-item.active{
+    background-color: rgb(236 236 236);
+    color:black;
+    cursor:pointer;
+    font-weight: 700;
+ }
+.list-nav-content{
+    width: 79.5%;
+    height: 100%;
+    box-shadow: 4px 4px 5px #d0d0d0;
+}
+
+.list-nav-content .info-block{
+    height:200px;
+    margin-bottom: 0.5rem;
+    box-shadow: 4px 4px 5px #d0d0d0;
+}
+
+.list-nav-content .details-block{
+    height:calc(100% - 200px);
+    margin-bottom: 0.5rem;
+    box-shadow: 4px 4px 5px #d0d0d0;
+}
